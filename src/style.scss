@@ -76,36 +76,65 @@
     height: 80%;
     display: flex;
     overflow: hidden;
-    .sidebar {
+    .sidebar 
+    {
       flex: 1;
       border-right: 1px solid #3e3c61;
       background-color: #3e3c61;
-      .search
+      .search , .chats
       {
-          border-bottom: 1px solid gray;
-          .searchForm
+        border-bottom: 1px solid gray;
+        .searchForm 
+        {
+          padding: 10px;
+          input
           {
-            padding: 10px;
-              input{
-background: transparent;
-border: none;
-color: white;
-outline: none;
-              }
-          }
-          
-          .userChat
-          {
+            background: transparent;
+            border: none;
+            color: white;
+            outline: none;
 
-             img {
-                  width: 50px;
-                  height: 50px;
-                  border-radius: 50%;
-                  object-fit: cover;
-              }
+            &::placeholder 
+            {
+              color: lightgray;
+            }
           }
+        }
+        .userChat
+        {
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: white;
+          cursor: pointer;
+
+          &:hover 
+          {
+            background-color: #2f2d52;
+          }
+          img 
+          {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          .userChatInfo
+          {
+            span{
+              font-size: 18px;
+              font-weight: 500;
+            }
+            p {
+              font-size: 14px;
+              color: lightgray;
+            }
+          }
+        }
       }
-      .nav {
+      .nav 
+      {
         display: flex;
         align-items: center;
         background-color: #2f2d52;
@@ -113,22 +142,24 @@ outline: none;
         padding: 10px;
         justify-content: space-between;
         color: #ddddf7;
-
-        .logo {
+        .logo 
+        {
           font-weight: bold;
         }
-
-        .user {
+        .user 
+        {
           display: flex;
           gap: 10px;
-          img {
+          img 
+          {
             border-color: #ddddf7;
-            height:30px;
+            height: 30px;
             width: 30px;
             border: 1px solid #5d5b8d;
-            border-radius: 50% ;
+            border-radius: 50%;
           }
-          button {
+          button 
+          {
             background-color: #5d5b8d;
             color: #ddddf7;
             font-size: 10px;
@@ -136,9 +167,10 @@ outline: none;
             cursor: pointer;
           }
         }
-       
+        
       }
     }
+    
     .chat {
       flex: 2;
     }
